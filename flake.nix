@@ -30,6 +30,11 @@
         description = "A Rust web server including a NixOS module";
       };
 
+      scala3 = {
+        path = ./scala3;
+        description = "Scala3 with devshells";
+      };
+
       compat = {
         path = ./compat;
         description = "A default.nix and shell.nix for backward compatibility with Nix installations that don't support flakes";
