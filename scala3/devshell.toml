@@ -5,15 +5,15 @@ help = "Per project developer environments"
 
 [[commands]]
 package = "dotty"
-help = "scala 3"
+help = "Scala 3"
 
 [[commands]]
 package = "metals"
-help = "scala langauge server"
+help = "Scala langauge server"
 
 [[commands]]
 package = "scalafmt"
-help = "scala formatter"
+help = "Scala formatter"
 
 [[commands]]
 package = "sbt"
