@@ -4,7 +4,6 @@
   nixConfig.extra-experimental-features = "nix-command flakes ca-references";
   nixConfig.substituters = "https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org/";
 
-  inputs.devshell.url = "github:numtide/devshell";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.flake-compat = {
@@ -12,14 +11,11 @@
     flake = false;
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-utils, devshell, ... }:
+  outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs =
-          import nixpkgs {
-            inherit system;
-            overlays = [ devshell.overlay ];
-          };
+        overlays = [];
+        pkgs = import nixpkgs { inherit system overlays; };
         project = returnShellEnv:
           pkgs.haskellPackages.developPackage {
             inherit returnShellEnv;
