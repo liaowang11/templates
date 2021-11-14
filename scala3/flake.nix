@@ -1,6 +1,9 @@
 {
   description = "Scala3 environments";
 
+  nixConfig.extra-experimental-features = "nix-command flakes ca-references";
+  nixConfig.substituters = "https://mirrors.ustc.edu.cn/nix-channels/store https://cache.nixos.org/";
+
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.devshell.url = "github:numtide/devshell";
   inputs.flake-utils.url = "github:numtide/flake-utils";
