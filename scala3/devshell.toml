@@ -1,0 +1,20 @@
+# https://numtide.github.io/devshell
+[[commands]]
+package = "devshell.cli"
+help = "Per project developer environments"
+
+[[commands]]
+package = "dotty"
+help = "scala 3"
+
+[[commands]]
+package = "metals"
+help = "scala langauge server"
+
+[[commands]]
+package = "scalafmt"
+help = "scala formatter"
+
+[[commands]]
+package = "sbt"
+help = "Scala built tools"
