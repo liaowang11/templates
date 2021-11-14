@@ -45,6 +45,11 @@
         description = "Scala3 with devshells";
       };
 
+      haskell = {
+        path = ./haskell;
+        description = "Haskell (default version)";
+      };
+
       compat = {
         path = ./compat;
         description = "A default.nix and shell.nix for backward compatibility with Nix installations that don't support flakes";
