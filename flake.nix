@@ -60,6 +60,11 @@
         description = "A Hello World in Haskell with one dependency";
       };
 
+      racket = {
+        path = ./racket;
+        description = "Very simple racket dev env";
+      };
+
     };
 
     defaultTemplate = self.templates.trivial;
