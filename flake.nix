@@ -80,6 +80,11 @@
         description = "A simple Go package";
       };
 
+      racket = {
+        path = ./racket;
+        description = "Very simple racket dev env";
+      };
+
     };
 
     defaultTemplate = self.templates.trivial;
