@@ -14,6 +14,16 @@
         path = ./simple-container;
         description = "A NixOS container running apache-httpd";
       };
+    
+      python = {
+        path = ./python;
+        description = "Python template, using poetry2nix";
+      };
+
+      rust = {
+        path = ./rust;
+        description = "Rust template, using Naersk";
+      };
 
       bash-hello = {
         path = ./bash-hello;
@@ -43,6 +53,11 @@
       compat = {
         path = ./compat;
         description = "A default.nix and shell.nix for backward compatibility with Nix installations that don't support flakes";
+      };
+
+      haskell-hello = {
+        path = ./haskell-hello;
+        description = "A Hello World in Haskell with one dependency";
       };
 
     };
