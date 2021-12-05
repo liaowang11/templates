@@ -20,7 +20,7 @@
       in {
         devShell = pkgs.mkShell {
           name = "scala3";
-          buildInputs = with pkgs; [ dotty metals scalafmt sbt ];
+          buildInputs = with pkgs; [ dotty metals scalafmt (sbt.override { jre = jdk11;}) ];
         };
       });
 }
