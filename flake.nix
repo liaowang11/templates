@@ -65,6 +65,11 @@
         description = "Very simple racket dev env";
       };
 
+      purescript = {
+        path = ./purescript;
+        description = "Nix shell for purescript by easy purescript";
+      };
+
     };
 
     defaultTemplate = self.templates.trivial;
