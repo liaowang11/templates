@@ -90,6 +90,11 @@
         description = "Nix shell for purescript by easy purescript";
       };
 
+      zig = {
+        path = ./zig;
+        description = "Zig with zig overlay";
+      };
+
     };
 
     defaultTemplate = self.templates.trivial;
