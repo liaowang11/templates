@@ -15,7 +15,6 @@ in (pkgs.mkShell {
     purescript-language-server
     pscid
     pulp
-    purty
     pkgs.nodejs
   ];
 }).overrideAttrs (oldAttrs: { name = "easy-purescript-nix"; })
