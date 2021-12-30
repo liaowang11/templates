@@ -11,7 +11,7 @@
         in {
 
           devShell = pkgs.mkShell {
-            name = "racket";
+            name = "racket-${pkgs.racket.version}";
             buildInputs = with pkgs; [ racket ];
           };
 
