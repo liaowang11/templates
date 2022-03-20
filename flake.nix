@@ -25,6 +25,11 @@
         description = "Rust template, using Naersk";
       };
 
+      rust-nightly = {
+        path = ./rust-nightly;
+        description = "Rust nightly template, using Naersk";
+      };
+
       bash-hello = {
         path = ./bash-hello;
         description = "An over-engineered Hello World in bash";
