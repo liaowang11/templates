@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
-    zig.url = "github:arqv/zig-overlay";
+    zig.url = "github:mitchellh/zig-overlay";
     zls = {
       url = "https://github.com/zigtools/zls.git";
       type = "git";
@@ -15,7 +15,7 @@
     utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        zigLatest = zig.packages."${system}".master.latest;
+        zigLatest = zig.packages."${system}".master;
         zlsPackage = pkgs.stdenvNoCC.mkDerivation {
           name = "zls";
           version = "master";
